@@ -1,0 +1,371 @@
+/* Reset dan base styles untuk mencegah scroll */
+html,
+body,
+#root,
+.login-page {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.login-page {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-container {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 85vh;
+    overflow: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.login-card::-webkit-scrollbar {
+    display: none;
+}
+
+.login-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.login-subtitle {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-input {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.checkbox-label input {
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.login-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #764ba2;
+}
+
+/* Media Queries untuk Responsiveness */
+
+/* Tablet (768px dan lebih kecil) */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 30px 25px;
+        margin: 0 15px;
+        max-height: 85vh;
+    }
+
+    .login-title {
+        font-size: 24px;
+    }
+
+    .login-subtitle {
+        font-size: 13px;
+    }
+
+    .form-input {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .login-button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile (480px dan lebih kecil) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+        margin: 0 10px;
+        max-height: 90vh;
+        border-radius: 10px;
+    }
+
+    .login-title {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .login-subtitle {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .login-form {
+        gap: 15px;
+    }
+
+    .form-group {
+        gap: 6px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .form-input {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .forgot-link {
+        align-self: flex-end;
+    }
+
+    .login-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .signup-link {
+        font-size: 13px;
+    }
+}
+
+/* Mobile sangat kecil (360px dan lebih kecil) */
+@media (max-width: 360px) {
+    .login-card {
+        padding: 20px 15px;
+        margin: 0 5px;
+    }
+
+    .login-title {
+        font-size: 20px;
+    }
+
+    .login-subtitle {
+        font-size: 11px;
+    }
+
+    .form-input {
+        padding: 8px 10px;
+    }
+
+    .login-button {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .checkbox-label {
+        font-size: 12px;
+    }
+
+    .forgot-link {
+        font-size: 12px;
+    }
+
+    .signup-link {
+        font-size: 12px;
+    }
+}
+
+/* Landscape mode untuk mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .login-container {
+        align-items: flex-start;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .login-card {
+        max-height: 95vh;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .login-title {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .login-subtitle {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .login-form {
+        gap: 12px;
+    }
+
+    .form-group {
+        gap: 5px;
+    }
+
+    .form-input {
+        padding: 8px 12px;
+    }
+
+    .login-button {
+        padding: 10px;
+    }
+}
+
+/* Untuk layar sangat tinggi (mencegah card terlalu kecil) */
+@media (min-height: 900px) {
+    .login-card {
+        max-height: 700px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .login-button:hover {
+        transform: none;
+    }
+
+    .form-input {
+        font-size: 16px;
+        /* Mencegah zoom otomatis di iOS */
+    }
+
+    .login-button {
+        min-height: 44px;
+        /* Ukuran touch target minimum */
+    }
+
+    .checkbox-label input,
+    .forgot-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
